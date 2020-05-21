@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PCShutDowner</string>
+    <string name="connect">connect</string>
+    <string name="shutdown">shutdown</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+</resources>
