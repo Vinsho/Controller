@@ -145,10 +145,10 @@ class MainActivity : Activity() {
                     computers.add(Computer(ip, if (ip == inetIp.hostName) "" else inetIp.hostName))
                 } catch (e: Exception) {
                 }
-                adapter.notifyDataSetChanged()
             }
 
             runOnUiThread {
+                adapter.notifyDataSetChanged()
                 if (computers.size == 0) {
                     noResults.visibility = View.GONE
                 }
