@@ -31,24 +31,18 @@ class MainActivity : Activity() {
     lateinit var adapter: RecyclerViewAdapter
     lateinit var invalidAddress: TextView
     lateinit var disconnected: TextView
-    lateinit var progressWheel: ProgressWheel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_device_look_up)
+        val view = View(this)
+        openConnectionScene(view)
         StrictMode.setThreadPolicy(StrictMode.ThreadPolicy.Builder().permitAll().build())
         invalidAddress = findViewById(R.id.invalidAdress)
         disconnected = findViewById(R.id.disconnected)
-        progressWheel = findViewById(R.id.loading)
-
-        adapter = RecyclerViewAdapter(computers, this)
-        val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
     }
 
 
-    fun openManualConnectionScene() {
+    fun openManualConnectionScene(inst: View) {
         setContentView(R.layout.activity_manual_connect)
         try {
             ip = File(applicationContext.filesDir, "info.txt").readText()
@@ -61,7 +55,10 @@ class MainActivity : Activity() {
 
     fun openConnectionScene(inst: View) {
         setContentView(R.layout.activity_device_look_up)
-        disconnected.visibility = View.VISIBLE
+        adapter = RecyclerViewAdapter(computers, this)
+        recyclerView = findViewById(R.id.recycler_view)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
     }
 
     fun areYouSure(inst: View) {
@@ -131,7 +128,7 @@ class MainActivity : Activity() {
     fun sniffNetwork(inst: View) {
         noResults.visibility = View.GONE
         refresh.visibility = View.GONE
-        progressWheel.visibility = View.VISIBLE
+        findViewById<ProgressWheel>(R.id.loading).visibility = View.VISIBLE
         computers.clear()
         adapter.notifyDataSetChanged()
         thread {
@@ -153,7 +150,7 @@ class MainActivity : Activity() {
                 if (computers.size == 0) {
                     noResults.visibility = View.GONE
                 }
-                progressWheel.visibility = View.INVISIBLE
+                findViewById<ProgressWheel>(R.id.loading).visibility = View.INVISIBLE
                 refresh.visibility = View.GONE
                 findViewById<ImageView>(R.id.refresh).visibility = View.VISIBLE
             }
