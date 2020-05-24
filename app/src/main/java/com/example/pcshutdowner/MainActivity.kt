@@ -41,7 +41,7 @@ class MainActivity : Activity() {
         disconnected = findViewById(R.id.disconnected)
         progressWheel = findViewById(R.id.loading)
 
-        val adapter = RecyclerViewAdapter(computers, this)
+        adapter = RecyclerViewAdapter(computers, this)
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
