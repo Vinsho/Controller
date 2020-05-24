@@ -41,7 +41,7 @@ class MainActivity : Activity() {
         disconnected = findViewById(R.id.disconnected)
         progressWheel = findViewById(R.id.loading)
 
-        adapter = RecyclerViewAdapter(computers, this)
+        val adapter = RecyclerViewAdapter(computers, this)
         val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
@@ -145,11 +145,10 @@ class MainActivity : Activity() {
                     computers.add(Computer(ip, if (ip == inetIp.hostName) "" else inetIp.hostName))
                 } catch (e: Exception) {
                 }
-
+                adapter.notifyDataSetChanged()
             }
 
             runOnUiThread {
-                adapter.notifyDataSetChanged()
                 if (computers.size == 0) {
                     noResults.visibility = View.GONE
                 }
