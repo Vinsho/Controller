@@ -9,6 +9,18 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/toggleSubsYoutube"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/stat_notify_chat"
+        android:onClick="sendMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.568" />
+
+    <Button
         android:id="@+id/pause"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="55dp"
@@ -44,42 +56,6 @@
         app:layout_constraintVertical_bias="0.261" />
 
     <Button
-        android:id="@+id/forward"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@android:drawable/ic_media_ff"
-        android:fontFamily="sans-serif"
-        android:onClick="sendMessage"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.789"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
-
-    <Button
-        android:id="@+id/backward"
-        style="@style/Widget.AppCompat.Button"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:background="@android:drawable/ic_media_rew"
-        android:fontFamily="sans-serif"
-        android:onClick="sendMessage"
-        android:textAlignment="center"
-        android:textColor="#000000"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
-
-    <Button
         android:id="@+id/prev"
         style="@style/Widget.AppCompat.Button"
         android:layout_width="55dp"
@@ -112,7 +88,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.437" />
+        app:layout_constraintVertical_bias="0.418" />
+
+    <Button
+        android:id="@+id/forward"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/ic_media_ff"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
+
+    <Button
+        android:id="@+id/backward"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/ic_media_rew"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.418" />
 
     <Button
         android:id="@+id/tSwitch"
@@ -225,15 +237,14 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Video controls"
+        android:text="Youtube controls"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintVertical_bias="0.155" />
 
     <ImageView
         android:id="@+id/shutdown"
@@ -254,7 +265,7 @@
         android:layout_height="60dp"
         android:layout_marginStart="16dp"
         android:background="@android:drawable/ic_menu_close_clear_cancel"
-        android:onClick="openConnectionScene"
+        android:onClick="sendMessage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C2D2E"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="73dp"
+        android:layout_height="51dp"
+        android:src="@android:drawable/ic_lock_silent_mode_off"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/up"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toEndOf="@+id/down"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.901" />
+
+    <Button
+        android:id="@+id/up"
+        style="@android:style/Widget.Button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="#E65100"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:text="@string/plus"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906"
+        tools:text="+" />
+
+    <Button
+        android:id="@+id/delayUpVlc"
+        style="@android:style/Widget.Button"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:background="#E65100"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:text="delayUp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593"
+        tools:text="delay +" />
+
+    <Button
+        android:id="@+id/delayDownVlc"
+        style="@android:style/Widget.Button"
+        android:layout_width="70dp"
+        android:layout_height="55dp"
+        android:background="#E65100"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:text="delayDown"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.155"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593"
+        tools:text="delay -" />
+
+    <Button
+        android:id="@+id/down"
+        style="@android:style/Widget.Button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="#E65100"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:text="@string/minus"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.148"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.906"
+        tools:text="-" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="72dp"
+        android:layout_height="52dp"
+        android:src="@drawable/vlc_jpg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <Button
+        android:id="@+id/space"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/ic_media_pause"
+        android:onClick="sendMessage"
+        app:layout_constraintBottom_toTopOf="@+id/fullscreen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <Button
+        android:id="@+id/forwardVlc"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/ic_media_ff"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <Button
+        android:id="@+id/slowerVlc"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/arrow_down_float"
+        android:onClick="sendMessage"
+        app:layout_constraintBottom_toTopOf="@+id/backwardVlc"
+        app:layout_constraintEnd_toStartOf="@+id/space"
+        app:layout_constraintHorizontal_bias="0.593"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <Button
+        android:id="@+id/fasterVlc"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/arrow_up_float"
+        android:onClick="sendMessage"
+        app:layout_constraintBottom_toTopOf="@+id/forwardVlc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintStart_toEndOf="@+id/space"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.752" />
+
+    <Button
+        android:id="@+id/backwardVlc"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/ic_media_rew"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <Button
+        android:id="@+id/fullscreen"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@drawable/full"
+        android:fontFamily="sans-serif"
+        android:onClick="sendMessage"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.35" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtitles"
+        android:textColor="#E65100"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/toggleSubsVlc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullscreen" />
+
+    <Button
+        android:id="@+id/toggleSubsVlc"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:background="@android:drawable/stat_notify_chat"
+        android:onClick="sendMessage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.593" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
